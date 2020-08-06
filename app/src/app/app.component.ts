@@ -2,28 +2,19 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'myapp',
-  template: `<h1>where are you work hard please
-  </h1>
-  <button (click)="onclick()">mybutton</button>
-  <h2>count up {{counter}}</h2>
-  <div>{{title}}</div>
-  {{title.toUpperCase()}}
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'app';
-  counter=0;
-  onclick(){
-    this.counter++;
-if(this.counter%5==0){
-  this.title="mmm"
-}
-else if(this.counter%3==0){
-  this.title="ddd"
-}
-else{
-  this.title="boring"
-}
+  message:number=0;
+  sum:number=0;
+  PassMessage(value:number) {
+    // because the child emit a number 1 to the parent 
+    // so the parameter type is number
+
+    this.sum+=value;
+
+    
   }
 }

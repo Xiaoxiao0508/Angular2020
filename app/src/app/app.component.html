@@ -1,4 +1,9 @@
-<h1>xiaoxiao cao
-{{title}}
-</h1>
-<app-couter>app-couter</app-couter>
+<h1>{{title}}</h1>
+<h2>{{sum}}</h2>
+<!-- $event will give access to the argument which is number 1 emitted from the child -->
+<app-couter name="bobo"(counted)="PassMessage($event)"></app-couter>
+<app-couter (counted)="PassMessage($event)"></app-couter>
+<app-couter (counted)="PassMessage($event)"></app-couter>
+<app-couter (counted)="PassMessage($event)"></app-couter>
+
+

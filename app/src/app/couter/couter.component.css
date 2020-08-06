@@ -1,0 +1,11 @@
+.counter{
+    border:dashed pink 2px;
+    border-radius:2px;
+    padding:5px;
+    cursor: pointer;
+    font-size: 24px;
+
+}
+.decro{
+    color:blue;
+}
