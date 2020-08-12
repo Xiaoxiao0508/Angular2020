@@ -1,14 +1,18 @@
+.contact{
+    border: 1px solid black;
+    height: 70px;
+    width: 300px;
+    margin:5px;
+  
+}
+
 .imageclass{
     height: 50px;
     width: 50px;
     float: left;
+    margin:10px;
 }
 .textclass{
     float: left;
-}
-.contact{
-    border:2px solid black ;
-    /* padding:50px; */
-    /* margin:10px; */
-
+    margin:10px;
 }
