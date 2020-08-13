@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
 name:string="";
 @Input()
 address:string="";
+
   ngOnInit(): void {
   }
 
