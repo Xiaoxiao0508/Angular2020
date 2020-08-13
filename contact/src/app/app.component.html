@@ -1,7 +1,4 @@
-<button (click)="function()">I am a button</button>
+
 <div  *ngFor="let contact of contacts;index as i;first as f">
-<app-contact name={{i}}{{contact}}{{f}}></app-contact>
-<!-- <app-contact  name="vicky" address="23 Queen Street,Sydney"></app-contact>
-<app-contact  name="John" address="19 Lakewood Drive,Melbourne"></app-contact>
-<app-contact  name="Tina" address="125 King Street,Melbourne"></app-contact> -->
+<app-contact [singlecontact]="contact"></app-contact>
 </div>

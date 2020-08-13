@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import{Contact} from './contact';
 
 @Component({
   selector: 'app-contact',
@@ -6,13 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  imageUrl="https://www.kidsmathgamesonline.com/images/pictures/shapes/circle.jpg"
 
   constructor() { }
+
 @Input()
-name:string="";
-@Input()
-address:string="";
+singlecontact:Contact;
 
   ngOnInit(): void {
   }
