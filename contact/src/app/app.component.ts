@@ -9,14 +9,7 @@ import { Contact } from './contact/contact';
 })
 export class AppComponent {
   title = 'contact';
-  showerror:boolean=true;
-  contacts:Contact[]=[
-    new Contact("Bob","Mr","https://www.kidsmathgamesonline.com/images/pictures/shapes/circle.jpg","23 King street"),
-    new Contact("James","Mr","https://www.kidsmathgamesonline.com/images/pictures/shapes/circle.jpg","23 King street"),
-    new Contact("Olivia","Miss","https://www.kidsmathgamesonline.com/images/pictures/shapes/circle.jpg","23 King street"),
-    new Contact("Jo","Mrs","https://www.kidsmathgamesonline.com/images/pictures/shapes/circle.jpg","23 King street")
-   
-   ];
+ 
 //  function(){
 //     this.showerror=!this.showerror;
 //   }
