@@ -1,0 +1,13 @@
+<div *ngIf="IsDeleted" class="detailclass">
+<img src={{planet.imageUrl}} class="imageclass">
+<div >
+    <div>Name:{{planet.name}}</div>
+    <div>Distance:{{planet.distancefromSun}}</div>
+    <input #distance type="number" [value]="planet.distancefromSun"/>
+    <!-- property binding using [] -->
+    <a *ngIf="!editting" href="#" (click)="starteditting()">Edit</a>
+    <a *ngIf="editting" href="#" (click)="endeditting(distance.value)">Save</a>
+    <div>Moons:{{planet.moons}}</div>
+    <button (click)="DeletePlanet()">Delete</button>
+</div>
+</div>

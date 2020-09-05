@@ -1,0 +1,10 @@
+.imageclass{
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin:10px;
+}
+.detailclass{
+position: relative;
+left:40px;
+}
