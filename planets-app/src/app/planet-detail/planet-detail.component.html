@@ -1,13 +1,33 @@
-<div *ngIf="IsDeleted" class="detailclass">
-<img src={{planet.imageUrl}} class="imageclass">
-<div >
-    <div>Name:{{planet.name}}</div>
-    <div>Distance:{{planet.distancefromSun}}</div>
-    <input #distance type="number" [value]="planet.distancefromSun"/>
-    <!-- property binding using [] -->
-    <a *ngIf="!editting" href="#" (click)="starteditting()">Edit</a>
-    <a *ngIf="editting" href="#" (click)="endeditting(distance.value)">Save</a>
-    <div>Moons:{{planet.moons}}</div>
-    <button (click)="DeletePlanet()">Delete</button>
-</div>
-</div>
+<form #editForm="ngForm">
+    <!-- setting variable to some form of type -->
+    <!-- angular specific syntax,creating a reference variable to this form of ngForm-->
+    <!-- ngform is part of the angular form modules been installed -->
+    <div *ngIf="IsDeleted" class="detailclass">
+        <img src={{planet.imageUrl}} class="imageclass">
+        <div>
+            <div>Name:{{planet.name}}</div>
+            <div *ngIf="!editting">
+                <div>Distance:{{planet.distancefromSun}}</div>
+            </div>
+            <!-- inline editting way -->
+            <!-- <input #distance type="number" [value]="planet.distancefromSun"/>
+            property binding using []
+            \<a *ngIf="!editting" href="#" (click)="starteditting()">Edit</a> -->
+            <!-- <a *ngIf="editting" href="#" (click)="endeditting(distance.value)">Save</a> -->
+            <!--  FormsModule way -->
+            <div *ngIf="editting">
+                <input type="number" name="address"[(ngModel)]="planet.distancefromSun" required #distance="ngModel"/>
+                <!-- if ngModel is used within a form tag, the name attribute must be set,the name can be anything -->
+                <!-- the temple variable defined is type ngModel -->
+                <div [hidden]="distance.valid||distance.pristine">You must enter a distance</div>
+            </div>
+            <!-- ngModel not FormsModule -->
+            <button *ngIf="!editting" href="#" (click)="starteditting()">Edit</button>
+            <button *ngIf="editting" href="#" (click)="endeditting()">Save</button>
+
+
+            <div>Moons:{{planet.moons}}</div>
+            <button (click)="DeletePlanet()">Delete</button>
+        </div>
+    </div>
+</form>

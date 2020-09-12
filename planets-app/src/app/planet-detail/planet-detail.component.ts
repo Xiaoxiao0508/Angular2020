@@ -26,7 +26,6 @@ editting:boolean=false;
   }
   endeditting(distance:number){
 this.editting=false;
-this.planet.distancefromSun=distance;
 this.planetsService.PlanetList.sort(function (a, b) {
   return a.distancefromSun - b.distancefromSun;
 })
