@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PlanetsListComponent } from './planets-list/planets-list.component';
 import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
 import { PlanetsCreateComponent } from './planets-create/planets-create.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PlanetsCreateComponent } from './planets-create/planets-create.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

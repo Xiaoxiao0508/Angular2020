@@ -16,15 +16,17 @@
             <!-- <a *ngIf="editting" href="#" (click)="endeditting(distance.value)">Save</a> -->
             <!--  FormsModule way -->
             <div *ngIf="editting">
-                <input type="number" name="address"[(ngModel)]="planet.distancefromSun" required #distance="ngModel"/>
+                <input class="form-control" placement="top"
+                ngbPopover="hello xiaoxiao,i am popover"type="number" name="address"[(ngModel)]="planet.distancefromSun" required #distance="ngModel"/>
                 <!-- if ngModel is used within a form tag, the name attribute must be set,the name can be anything -->
                 <!-- the temple variable defined is type ngModel -->
+                <!-- use angular bootstrap popover component -->
                 <div [hidden]="distance.valid||distance.pristine">You must enter a distance</div>
             </div>
             <!-- ngModel not FormsModule -->
-            <button *ngIf="!editting" href="#" (click)="starteditting()">Edit</button>
-            <button *ngIf="editting" href="#" (click)="endeditting()">Save</button>
-
+            <button class="btn btn-info" *ngIf="!editting" href="#" (click)="starteditting()">Edit</button>
+            <button class="btn btn-primary"*ngIf="editting" href="#" (click)="endeditting()">Save</button>
+           <!-- install angular bootstrap, copy the button component from get boogstrap website to apply css-->
 
             <div>Moons:{{planet.moons}}</div>
             <button (click)="DeletePlanet()">Delete</button>
